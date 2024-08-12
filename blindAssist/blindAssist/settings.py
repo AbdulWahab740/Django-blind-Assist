@@ -23,9 +23,9 @@ print(BASE_DIR)
 SECRET_KEY = 'django-insecure-tqd4vj1_jwm9(+uvtw01g=7jx(lo1fxarsd%qgwvu0b!cdtcw('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'blindapp',
     'corsheaders',
 ]
@@ -129,8 +130,11 @@ STATICFILES_DIRS = [
     BASE_DIR / 'blindapp/static',
 ]
 
-# Directory where collectstatic will put collected files
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
+MEDIA_URLS ='/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # Default primary key field type
