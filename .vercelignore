@@ -1,0 +1,17 @@
+# Ignore virtual environments
+blind_env/
+env/
+
+# Ignore media files
+media/
+
+# Ignore cached files and logs
+*.log
+__pycache__/
+*.pyc
+
+# Ignore static files (they should be collected and served via STATIC_ROOT)
+staticfiles/
+
+# Ignore large directories
+migrations/
