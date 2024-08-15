@@ -8,7 +8,7 @@
     {
         "src": "build_files.sh",
         "use": "@vercel/static-build",
-        "config": { "distDir": "blindapp/staticfiles" }
+        "config": { "distDir": "staticfiles" }
     }],
     "routes": [
         {
@@ -19,6 +19,5 @@
             "src": "/(.*)",
             "dest": "blindassist/wsgi.py"
         }
-    ],
-    "outputDirectory":"blindapp/staticfiles"
+    ]
 }
