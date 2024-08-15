@@ -55,7 +55,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  
 ]
 
-ROOT_URLCONF = 'blindAssist.urls'
+ROOT_URLCONF = 'blindassist.urls'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
@@ -78,7 +78,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'blindAssist.wsgi.application'
+WSGI_APPLICATION = 'blindassist.wsgi.application'
 
 
 # Database
